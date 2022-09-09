@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Advanced tasks
  *
  * Return Always 0 (Success)
  */
