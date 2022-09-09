@@ -7,8 +7,7 @@
  * this program that prints all single digit numbers of base 10
  * Return : Always 0 (Success)
  */
-int main(void) 
-	// declaring variable
+int main(void)
 {
 	int c;
 	
