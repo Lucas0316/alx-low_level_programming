@@ -9,20 +9,27 @@
 
 int main(void)
 {
-	int i = 1;
+	int h = 1;
 
-	for (; i < 100 ; i++)
+	while (h <= 100)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if (h % 3 == 0 && h % 5 == 0)
 			printf("FizzBuzz ");
-		else if (i % 3 == 0)
+		else if (h % 5 == 0)
+		{
+			if (h == 100)
+			{
+				printf("Buzz");
+				printf("\n");
+			}
+			else
+				printf("Buzz ");
+		}
+		else if (h % 3 == 0)
 			printf("Fizz ");
-		else if (i % 5 == 0)
-			printf("Buzz ");
 		else
-			printf("%d ", i);
+			printf("%d ", h);
+	h++;
 	}
-	printf("Buzz\n");
-
 	return (0);
 }
