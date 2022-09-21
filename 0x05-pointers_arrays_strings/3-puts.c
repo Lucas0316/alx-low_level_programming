@@ -2,14 +2,18 @@
 
 /**
 * _puts - prints a string to stdout
-* str refers to selected string
+* @str : selected string
 * Return: Nothing
 */
 
 void _puts(char *str)
 {
-	char string [] = "Fear is the killer of dreams";
-	puts (string);
+	int i = 0;
 
-	Return (0);
+	while (*(str + i) != '\0')
+	{
+		putchar(*(str + i));
+		i++;
+	}
+	putchar(10);
 }
