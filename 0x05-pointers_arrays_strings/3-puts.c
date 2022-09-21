@@ -6,12 +6,10 @@
 * Return: Nothing
 */
 
-void _puts(char *str);
+void _puts(char *str)
 {
-char *str;
+	char string [] = "Fear is the killer of dreams";
+	puts (string);
 
-str = "Fear is the enemy of all dreams";
-_puts(str);
-
-Return (0);
+	Return (0);
 }
