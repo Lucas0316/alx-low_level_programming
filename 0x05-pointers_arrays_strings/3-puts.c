@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
-* _puts - prints a strig to stdout
+* _puts - prints a string to stdout
+* str refers to selected string
 * Return: Nothing
 */
 
-int main(void)
+void _puts(char *str);
 {
 char *str;
 
 str = "Fear is the enemy of all dreams";
-puts (string);
+_puts(str);
 
 Return (0);
 }
