@@ -5,15 +5,17 @@
 * @s: an input string
 * Return: char pointer to converted string
 */
-char *string_toupper(char *s)
-{
-char *start = s;
 
-while (*s)
+char *string_toupper(char *str)
 {
-if (*s >= 'a' && *s <= 'z')
-*s -= 32;
+	int i = 0;
 
-s++;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
+	}
+
+	return (str);
 }
-return (start);
