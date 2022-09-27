@@ -9,16 +9,26 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int i, j;
+	int count = 0, flag;
+	char *start = accept;
 
-for (i = 0; s[i]; i++)
-{
-for (j = 0; accept[j]; j++)
-{
-if (s[i] == accept[j])
-break;
+	while (*s)
+	{
+		flag = 0;
+		while (*accept)
+		{
+			if (*accept == *s)
+			{
+				count++;
+				flag = 1;
+				break;
+			}
+			accept++;
+		}
+		s++;
+		accept = start;
+		if (flag == 0)
+			break;
+	}
+	return (count);
 }
-if (!accept[j])
-break;
-}
-return (i);
