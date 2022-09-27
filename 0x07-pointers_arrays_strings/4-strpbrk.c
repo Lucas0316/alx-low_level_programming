@@ -6,21 +6,20 @@
  * @accept: an input character with to locate into string s
  * Return:  a pointer to the byte in s
  */
+
 char *_strpbrk(char *s, char *accept)
 {
-	char *start = accept;
+	unsigned int i, j;
 
-	while (*s)
+	for (i = 0; s[i]; i++)
 	{
-		while (*accept)
+		for (j = 0; accept[j]; j++)
 		{
-			if (*accept == *s)
-				return (s);
-			accept++;
+			if (s[i] == accept[j])
+				break;
 		}
-
-		accept = start;
-		s++;
+		if (accept[j])
+			return (s + i);
 	}
-	return (NULL);
+	return (0);
 }
