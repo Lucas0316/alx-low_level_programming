@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
- * _strchr - locates a character in a string
- * @s: string to check
- * @c: character to check for
- *
- * Return: pointer to spot in s with c or null
- */
-
-char *_strchr(char *s, char c)
+* _strspn - gets length of a substring
+* @s: string to check
+* @accept: string to check against
+*
+* Return: number of bytes of s in accept
+*/
+unsigned int _strspn(char *s, char *accept)
 {
-	int i;
+unsigned int i, j;
 
-	for (i = 0; *(s + i); i++)
-	{
-		if (*(s + i) == c)
-			return (s + i);
-	}
-	if (*(s + i) == c)
-		return (s + i);
-
-	return (0);
+for (i = 0; s[i]; i++)
+{
+for (j = 0; accept[j]; j++)
+{
+if (s[i] == accept[j])
+break;
 }
+if (!accept[j])
+break;
+}
+return (i);
