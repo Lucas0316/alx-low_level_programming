@@ -6,16 +6,15 @@
  * @b: Char to fill location
  * @n: Num of Bytes to be filled
  *
- * Return: Pointer to location
+ * Return: pointer to memory block
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *strt = s;
-
-	while (n--)
+	while (n)
 	{
-		*s = b;
-		s++;
+		s[n - 1] = b;
+		n--;
 	}
-	return (strt);
+	return (s);
 }
