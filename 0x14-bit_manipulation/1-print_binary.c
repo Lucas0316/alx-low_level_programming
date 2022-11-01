@@ -1,30 +1,26 @@
-#include "holberton.h"
-#include <limits.h>
+#include "main.h"
+
 /**
- * print_binary - prints the binary representation of a number
- * @n: number to convert
- * Return: none
- */
+*print_binary - prints the binary representation of a number.
+*@n: unsigned long int to be converted.
+*
+*Return: void.
+*/
+
 void print_binary(unsigned long int n)
 {
-	int i, start;
+	unsigned long int m;
 
-	start = 0;
 	if (n == 0)
-		_putchar('0');
-	/* how many bits in the machine -1 because index starts at 0*/
-	for (i = sizeof(n) * 8 - 1; i >= 0; i--)
 	{
-		/* so it doesn't print all zeros in the beginning */
-		if ((n >> i) & 1)
-			start = 1;
-		/* start printing once you find first 1 */
-		if (start == 1)
-		{
-			if ((n >> i) & 1)
-				_putchar('1');
-			else
-				_putchar('0');
-		}
+		_putchar('0');
+	}
+	else
+	{
+		m = n & 1;
+		n = n >> 1;
+		if (!(n == 0))
+			print_binary(n);
+		_putchar(m + '0');
 	}
 }
